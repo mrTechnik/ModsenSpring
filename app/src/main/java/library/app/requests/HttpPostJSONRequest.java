@@ -21,8 +21,6 @@ public class HttpPostJSONRequest {
 
         String requestJson = objectMapper.writeValueAsString(bookOrderID);
         HttpEntity<String> requestEntity = new HttpEntity<>(requestJson, headers);
-        System.out.println("!!!!!!!!!!!!!!!!!!" + requestJson);
-        System.out.println("!!!!!!!!!!!!!!!!!!" + requestEntity);
 
         return restTemplate.exchange(link, HttpMethod.POST, requestEntity, String.class);
     } 

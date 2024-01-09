@@ -118,6 +118,8 @@ A book information:
 5) description;
 6) author.
 
+## Endpoints
+
 Endponts description:
 1) ```addNewBook``` endpoint:
    It process incoming HTTP POST requests:
@@ -149,8 +151,6 @@ Endponts description:
    ```
    1) It update containded book data in PostgerSQL.
    2) Return a status of response.
-
-## Endpoints
 
 3) ```getAllBooks``` endpoint:
    It process incoming HTTP GET requests:
@@ -206,6 +206,32 @@ Endponts description:
    Deleted
    ```
    1) It delete a book entry from the PostgerSQL by book's ID.
+   2) Return a status of response.
+
+7) ```GetToken``` endpoint:
+   It process incoming HTTP POST requests:
+   example:
+   ```bash
+     curl -X POST http://localhost:8080/service/login --header "Content-Type: Application/json" --data "{"login": "<login>", "password": "<password>"}"
+   ```
+      
+   ```bash
+   <Bearer token>
+   ```
+   1) It get login and password and generate Bearer token.
+   2) Return a status of response.
+
+8) ```LogUp``` endpoint:
+   It process incoming HTTP POST requests:
+   example:
+   ```bash
+    curl -X POST http://localhost:8080/service/logup --header "Content-Type: Application/json" --data "{"login": "<login>", "password": "<password>"}"
+   ```
+      
+   ```bash
+   Saved
+   ```
+   1) It get login and password and create new user in the PostgreSQl.
    2) Return a status of response.
 
 ## Swagger

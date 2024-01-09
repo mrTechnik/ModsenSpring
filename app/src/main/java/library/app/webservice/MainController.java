@@ -111,7 +111,6 @@ public class MainController {
         Usr saved_user = usrRepo.findByLogin(usr.getLogin());
         if(Objects.equals(saved_user.getPassword(), usr.getPassword())){            
             String token = JwtUtil.generateToken(usr);
-            System.out.println(token);
             saved_user.setToken(token);
             usrRepo.save(saved_user);
             return token;
