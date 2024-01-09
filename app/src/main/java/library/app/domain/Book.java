@@ -77,13 +77,12 @@ public class Book {
   }
 
   public String to_String(){
-    return "{ "+
+    return "{"+
         "ID: " + getId() +
-        " ,ISBN: " + getIsbn() +
-        " ,ISBN: " + getIsbn() +
-        " ,Name: " + getName() +
-        " ,Jenre: " + getJenre() +
-        " ,Description: " + getDescription() +
-        " ,Author: " + getAuthor() + " }";
+        ", ISBN: " + getIsbn() +
+        ", Name: " + getName() +
+        ", Jenre: " + getJenre() +
+        ", Description: " + getDescription() +
+        ", Author: " + getAuthor() + "}";
   }
 }

@@ -13,7 +13,7 @@ public interface BookRepo extends JpaRepository<Book, Integer>{
                 nativeQuery = true)
     List<Book> findByIsbn(String isbn);
 
-    @Query(value = "select b.* from book b where b.isbn = :isbn limit first",
+    @Query(value = "select b.* from book b where b.isbn = :isbn limit 1",
                 nativeQuery = true)
     Book findByIsbnFirst(String isbn);
 }
